@@ -161,7 +161,7 @@ main li {
   color: #1f1f1fb1;
 }
 main button {
-  padding: 0.5em 2em;
+  padding: 1em 2em;
 }
 /* main apartments */
 div.layout main section.apartments div.show {
@@ -337,5 +337,8 @@ footer p:last-child {
   /* aside */
   div.layout aside {
     width: 70%;
+  }
+  div.layout main section.contact form input {
+    font-size: 1em;
   }
 }
