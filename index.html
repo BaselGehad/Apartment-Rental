@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Apartment Rental</title>
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/8ceece6883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+  </head>
+  <body>
+    <!-- inputs for picturs -->
+    <input type="radio" id="pic1" name="show" checked />
+    <input type="radio" id="pic2" name="show" />
+    <input type="radio" id="pic3" name="show" />
+    <input type="radio" id="pic4" name="show" />
+    <!-- check box for menu -->
+    <input type="checkbox" id="menu" />
+    <!-- header -->
+    <header>
+      <p>Rental</p>
+      <label for="menu"><i class="fa-solid fa-bars"></i></label>
+    </header>
+    <div class="layout">
+      <!-- side bar -->
+      <aside>
+        <label for="menu"><i class="fa-solid fa-close"></i></label>
+        <h2>Rental</h2>
+        <h2>from $99</h2>
+        <p>per night</p>
+        <form action="">
+          <label for="check-in"
+            ><i class="fa-solid fa-calendar-check"></i> Check In</label
+          >
+          <input type="date" id="check-in" name="check-in" />
+          <label for="check-out"
+            ><i class="fa-solid fa-calendar"></i> Check Out</label
+          >
+          <input type="date" name="check-out" id="check-out" />
+          <label for="adults"><i class="fa-solid fa-male"></i> Adults</label>
+          <input type="number" name="adults" id="adults" value="1" />
+          <label for="kids"><i class="fa-solid fa-child"></i> Kids</label>
+          <input type="number" name="kids" id="kids" value="0" />
+          <button>
+            <i class="fa-solid fa-search"></i> Search availability
+          </button>
+        </form>
+        <ul>
+          <li><i class="fa-solid fa-building"></i> Apartment</li>
+          <li><i class="fa-solid fa-rss"></i> Subscribe</li>
+          <li><i class="fa-solid fa-envelope"></i> Contact</li>
+        </ul>
+      </aside>
+      <!-- main content -->
+      <main>
+        <!-- apartment -->
+        <section class="apartments">
+          <h1>The Apartment</h1>
+          <div class="show">
+            <img src="livingroom.jpg" alt="livingroom" />
+            <img src="bedroom.jpg" alt="bedroo" />
+            <img src="livingroom2.jpg" alt="livingroom2" />
+            <img src="diningroom.jpg" alt="diningroom" />
+          </div>
+          <div class="smallpic">
+            <label for="pic1">
+              <img src="livingroom.jpg" alt="livingroom" />
+            </label>
+            <label for="pic2">
+              <img src="bedroom.jpg" alt="bedroo" />
+            </label>
+            <label for="pic3">
+              <img src="livingroom2.jpg" alt="livingroom2" />
+            </label>
+            <label for="pic4">
+              <img src="diningroom.jpg" alt="diningroom" />
+            </label>
+          </div>
+        </section>
+        <!-- space -->
+        <section class="space">
+          <h2>The space</h2>
+          <div>
+            <ul>
+              <li><i class="fa-solid fa-male"></i> Max People: 4</li>
+              <li><i class="fa-solid fa-bath"></i> Bathrooms: 2</li>
+              <li><i class="fa-solid fa-bed"></i> Bedrooms: 1</li>
+            </ul>
+            <ul>
+              <li><i class="fa-solid fa-clock"></i> Check In: After 3PM</li>
+              <li><i class="fa-solid fa-clock"></i> Check Out: 12PM</li>
+            </ul>
+          </div>
+        </section>
+        <hr />
+        <!-- amenities -->
+        <section class="amenities">
+          <h2>Amenities</h2>
+          <ul>
+            <li><i class="fa-solid fa-shower"></i> Shower</li>
+            <li><i class="fa-solid fa-wifi"></i> WiFi</li>
+            <li><i class="fa-solid fa-tv"></i> TV</li>
+            <li><i class="fa-solid fa-cutlery"></i> Kitchen</li>
+            <li><i class="fa-solid fa-thermometer"></i> Heating</li>
+            <li><i class="fa-solid fa-wheelchair"></i> Accessible</li>
+          </ul>
+        </section>
+        <hr />
+        <!-- extra info -->
+        <section class="extra-info">
+          <h2>Extra Info</h2>
+          <p>
+            Our apartment is really clean and we like to keep it that way. Enjoy
+            the Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Eveniet eos quos dicta aliquid est cumque voluptates quod explicabo,
+            nihil quo ducimus optio, ipsam, nulla consequuntur neque architecto
+            natus reiciendis cum?
+          </p>
+          <p>We accept:</p>
+          <ul>
+            <li><i class="fa-solid fa-credit-card"></i></li>
+            <li><i class="fa-brands fa-cc-mastercard"></i></li>
+            <li><i class="fa-brands fa-cc-amex"></i></li>
+            <li><i class="fa-brands fa-cc-paypal"></i></li>
+          </ul>
+        </section>
+        <hr />
+        <!-- rules -->
+        <section class="rules">
+          <h2>Rules</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+            perferendis iure maxime exercitationem mollitia tenetur enim
+            repudiandae officia, veritatis iste debitis non. Eius nisi ea
+            tempore maiores, odio ad accusamus.
+          </p>
+          <p>
+            Subscribe to receive updates on available dates and special offers.
+          </p>
+          <button>Subscribe</button>
+        </section>
+        <hr />
+        <!-- contact -->
+        <section class="contact">
+          <h2>Contact</h2>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> Chicago, US</li>
+            <li><i class="fa-solid fa-phone"></i> Phone: +00 151515</li>
+            <li><i class="fa-solid fa-envelope"></i> Email: mail@mail.com</li>
+          </ul>
+          <form action="">
+            <p>Questions? Go ahead, ask them:</p>
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="text" name="message" placeholder="Message" />
+            <button>Send a Message</button>
+          </form>
+        </section>
+        <!-- footer -->
+        <footer>
+          <p>find us on</p>
+          <ul>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-snapchat"></i></li>
+            <li><i class="fa-brands fa-pinterest"></i></li>
+            <li><i class="fa-brands fa-linkedin"></i></li>
+          </ul>
+          <p>Made with <i class="fa-solid fa-heart"></i>By Basel Gehad</p>
+          <p>This Template From W3</p>
+        </footer>
+      </main>
+    </div>
+    <hr />
+  </body>
+</html>

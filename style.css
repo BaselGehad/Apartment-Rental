@@ -1,0 +1,322 @@
+/* general ruls */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --gray: #f1f1f1;
+  --drkgray: #ccc;
+  --green: #4caf50;
+}
+body {
+  margin: 0;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+button {
+  background-color: var(--green);
+  border: none;
+  padding: 0.8em 1em;
+  color: white;
+  letter-spacing: 0.1em;
+}
+button:hover {
+  background-color: #75757597;
+  color: black;
+  cursor: pointer;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+h1,
+h2,
+h3 {
+  font-weight: lighter;
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--drkgray);
+  margin: 2em 0;
+}
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  z-index: 1;
+  display: none;
+}
+header p {
+  margin: 0;
+  font-size: 1.5em;
+}
+header i {
+  font-size: 1.5em;
+}
+/* header logical for menu */
+input[type="checkbox"]:checked ~ div.layout aside {
+  margin: 0;
+}
+/* page layout */
+div.layout {
+  max-width: 980px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  border-left: 1px solid var(--drkgray);
+  border-right: 1px solid var(--drkgray);
+}
+/* side bar "aside" */
+div.layout aside {
+  background-color: var(--gray);
+  max-height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: auto;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+div.layout aside label[for="menu"] {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+div.layout aside label[for="menu"]:hover {
+  background-color: #8c8c8cac;
+  cursor: pointer;
+}
+div.layout aside h2 {
+  padding: 0 1rem;
+}
+div.layout aside p {
+  padding: 0 1em;
+  margin-bottom: 3em;
+}
+div.layout aside form {
+  padding: 0 1em;
+}
+div.layout aside form input {
+  margin: 1em 0 2em;
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  color: rgb(125, 125, 125);
+  outline: none;
+}
+div.layout aside form button {
+  width: 100%;
+}
+
+div.layout aside form button i {
+  margin-right: 1em;
+}
+div.layout aside ul {
+  margin-top: 3em;
+}
+div.layout aside ul li {
+  padding: 1.5em 0.5em;
+}
+div.layout aside ul li:hover {
+  background-color: #7575758b;
+  cursor: pointer;
+}
+/* main */
+div.layout main {
+  padding: 0 1em;
+}
+div.layout main h1,
+h2 {
+  color: var(--green);
+}
+div.layout main i {
+  color: black;
+  margin-right: 0.5em;
+}
+main p {
+  color: #1f1f1fb1;
+}
+main li {
+  color: #1f1f1fb1;
+}
+main button {
+  padding: 0.5em 2em;
+}
+/* main apartments */
+div.layout main section.apartments div.show {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+div.layout main section.apartments div.show img {
+  display: none;
+}
+div.layout main section.apartments div.smallpic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+div.layout main section.apartments div.smallpic label {
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1em;
+}
+div.layout main section.apartments div.smallpic label:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* main apartments logical for pictures */
+input[id="pic1"]:checked ~ div.layout main div.show img:nth-child(1) {
+  display: block;
+}
+input[id="pic2"]:checked ~ div.layout main div.show img:nth-child(2) {
+  display: block;
+}
+input[id="pic3"]:checked ~ div.layout main div.show img:nth-child(3) {
+  display: block;
+}
+input[id="pic4"]:checked ~ div.layout main div.show img:nth-child(4) {
+  display: block;
+}
+input[id="pic1"]:checked ~ div.layout main div.smallpic label:nth-child(1) {
+  opacity: 1;
+}
+input[id="pic2"]:checked ~ div.layout main div.smallpic label:nth-child(2) {
+  opacity: 1;
+}
+input[id="pic3"]:checked ~ div.layout main div.smallpic label:nth-child(3) {
+  opacity: 1;
+}
+input[id="pic4"]:checked ~ div.layout main div.smallpic label:nth-child(4) {
+  opacity: 1;
+}
+/* main the space */
+div.layout main section.space div {
+  display: grid;
+  grid-template-columns: auto auto;
+  font-size: 1.2em;
+}
+div.layout main section.space div ul li {
+  margin-bottom: 1em;
+}
+/* main amenities */
+div.layout main section.amenities ul {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+div.layout main section.amenities ul li {
+  margin-bottom: 1em;
+}
+/* main extra info */
+div.layout main section.extra-info p:first-of-type {
+  line-height: 1.6;
+}
+div.layout main section.extra-info p:nth-of-type(2) {
+  display: inline-block;
+  margin: 0;
+}
+div.layout main section.extra-info ul {
+  display: inline-flex;
+}
+/* main rules */
+div.layout main section.rules p {
+  line-height: 1.6;
+}
+/* main contact */
+div.layout main section.contact ul li {
+  margin-bottom: 0.5em;
+}
+div.layout main section.contact form input {
+  width: 100%;
+  border: 1px solid var(--drkgray);
+  padding: 0.5em;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+}
+footer p {
+  margin: 1em;
+  text-transform: capitalize;
+}
+footer ul {
+  display: flex;
+}
+footer ul li i {
+  margin: 0 0.5em;
+}
+footer ul li i:hover {
+  color: #757575;
+  cursor: pointer;
+}
+div.layout footer p i {
+  color: red;
+}
+footer p:last-child {
+  margin-top: 0;
+}
+/* media */
+@media screen and (max-width: 990px) {
+  /* header */
+  header {
+    display: flex;
+  }
+  /* layout */
+  div.layout {
+    grid-template-columns: 1fr;
+    margin-top: 4em;
+  }
+  /* aside */
+  div.layout aside {
+    display: block;
+    width: 40%;
+    position: fixed;
+    margin-left: -100%;
+    z-index: 1;
+  }
+  div.layout aside label[for="menu"] {
+    display: block;
+  }
+  /* main the space */
+  div.layout main section.space div {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* general */
+  button {
+    width: 100%;
+  }
+  /* aside */
+  div.layout aside {
+    width: 50%;
+  }
+}
